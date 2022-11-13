@@ -1,0 +1,128 @@
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--Light-Grayish-Blue);
+}
+
+.container {
+  max-width: 650px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: white;
+  overflow: hidden;
+}
+
+.container h2 {
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.container p {
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.container .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+}
+
+.container .left img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2em;
+}
+
+.container .right h2 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.container .right .info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.container .right .info-box .flex-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .right .info-box .flex-right .flex-col {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.2em;
+}
+
+.container .right .info-box .flex-right .flex-col h2 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.container .right .info-box img {
+  width: 3em;
+  border-radius: 50%;
+}
+
+.container .right .info-box .socials {
+  width: 2.5em;
+  min-height: 2.5em;
+  border-radius: 50%;
+  background: var(--Light-Grayish-Blue);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.container .right .info-box .socials:hover {
+  background: var(--Desaturated-Dark-Blue);
+}
+
+.container .right .info-box .socials:hover .drop-down {
+  display: flex;
+}
+
+.container .right .info-box .socials img {
+  font-size: 0.4em;
+}
+
+.container .right .info-box .socials .drop-down {
+  width: 200px;
+  min-height: 30px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: absolute;
+  top: -50px;
+  display: none;
+}
