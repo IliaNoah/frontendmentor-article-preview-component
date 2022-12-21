@@ -20,8 +20,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -60,9 +60,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -94,8 +94,7 @@ body {
 }
 
 .container {
-  max-width: 50rem;
-  min-height: 15rem;
+  width: 50rem;
   display: flex;
   flex-direction: row;
   border-radius: 10px;
@@ -186,7 +185,7 @@ body {
 
 .drop-down p {
   text-transform: uppercase;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   color: var(--Grayish-Blue);
 }
 
@@ -205,21 +204,23 @@ body {
 }
 
 .socials::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 6rem;
   position: absolute;
-  top: 115%; left: 50%;
+  top: 115%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .socials::after {
-  content: '';
-  border-top: .8rem solid var(--Very-Dark-Grayish-Blue);
-  border-right: .8rem solid transparent;
-  border-left: .8rem solid transparent;
+  content: "";
+  border-top: 0.8rem solid var(--Very-Dark-Grayish-Blue);
+  border-right: 0.8rem solid transparent;
+  border-left: 0.8rem solid transparent;
   position: absolute;
-  top: 110%; left: 50%;
+  top: 110%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -229,4 +230,21 @@ body {
 
 .drop-down:hover .socials {
   display: flex;
+}
+
+@media (max-width: 41rem) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+  }
+  .left {
+    width: 100%;
+  }
+  .left img {
+    border-radius: 10px 10px 0 0;
+  }
+  .right {
+    width: 100%;
+  }
 }
